@@ -530,7 +530,7 @@ body {
     .about-text {
         background-image: url('shower.jpg');
         position: static;
-        width: 87%;
+        width: 85%;
         transform: translateX(0);
         animation: none;
         margin-top: 20px;
