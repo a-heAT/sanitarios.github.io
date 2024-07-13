@@ -530,7 +530,7 @@ body {
     .about-text {
         background-image: url('shower.jpg');
         position: static;
-        width: 90%;
+        width: 87%;
         transform: translateX(0);
         animation: none;
         margin-top: 20px;
@@ -673,9 +673,13 @@ body {
         flex-direction: column;
         align-items: center;
     }
+
+    #contacto .container {
+        width: 80%;
+        margin: 0 auto;
 }
 
-
+}
 
 #catalogo {
     background-color: #f4f4f4;
