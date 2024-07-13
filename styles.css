@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -37,7 +39,7 @@ body {
 
 .logo img {
     height: 50px;
-    margin-right: 10px;
+    margin-right: 0px;
 }
 
 .navbar {
@@ -530,7 +532,7 @@ body {
     .about-text {
         background-image: url('shower.jpg');
         position: static;
-        width: 85%;
+        width: 50%;
         transform: translateX(0);
         animation: none;
         margin-top: 20px;
@@ -675,7 +677,7 @@ body {
     }
 
     #contacto .container {
-        width: 80%;
+        width: 50%;
         margin: 0 auto;
 }
 
