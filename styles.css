@@ -1,0 +1,992 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 0.5s ease;
+}
+
+@keyframes slideDown {
+    from {
+        top: -100px;
+    }
+    to {
+        top: 0;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+.navbar {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff5722;
+}
+
+/* Estilos para el botón de hamburguesa */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    z-index: 1001; /* Asegúrate de que esté por encima de otros elementos */
+}
+
+/* Estilos para el menú móvil */
+.mobile-menu {
+    display: none;
+    background-color: white;
+    position: fixed; /* Cambiar a fixed para que se superponga a otros elementos */
+    top: 60px; /* Ajusta la distancia desde el header */
+    right: 0;
+    width: 100%;
+    max-width: 300px; /* O el tamaño que prefieras */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    animation: fadeIn 0.3s ease; /* Animación de aparición */
+}
+
+/* Estilos del menú móvil cuando está visible */
+.mobile-menu.show {
+    display: block;
+}
+
+/* Estilos de los enlaces en el menú móvil */
+.mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu li {
+    border-bottom: 1px solid #ddd;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #333;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+.mobile-menu a:hover {
+    background-color: #f5f5f5;
+}
+
+/* Media Queries para mostrar el botón de hamburguesa en móviles */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+}
+
+
+
+.hero {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 80px; /* To accommodate fixed header */
+    overflow: hidden; /* Ensure no overflow */
+}
+
+.hero img {
+    width: 100%;
+    height: 60vh; /* Adjust as needed */
+    object-fit: cover;
+    animation: fadeIn 2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: slideUp 1s ease;
+    padding: 0 20px; /* Add padding to prevent text from touching edges */
+}
+
+@keyframes slideUp {
+    from {
+        transform: translate(-50%, 50%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.hero-text h1 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 4rem; /* Aumentado para más visibilidad */
+    margin: 0;
+}
+
+.hero-text h2 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 2.5rem; /* Aumentado para más visibilidad */
+    margin-top: 10px;
+}
+
+.hero-text button {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #1c5cab;
+    color: white;
+    border: none;
+    padding: 20px 30px; /* Aumentado para más visibilidad */
+    font-size: 1.5rem; /* Aumentado para más visibilidad */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.hero-text button:hover {
+    background-color: #1c45ab;
+}
+
+.hero-text .info-text {
+    font-size: 1.2rem; /* Aumentado para más visibilidad */
+    margin-top: 15px;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .hero-text h1 {
+        font-size: 3.5rem; /* Tamaño de fuente para pantallas más pequeñas */
+    }
+    .hero-text h2 {
+        font-size: 2rem; /* Tamaño de fuente para pantallas más pequeñas */
+    }
+    .hero-text button {
+        padding: 15px 25px;
+        font-size: 1.3rem; /* Tamaño de fuente del botón para pantallas más pequeñas */
+    }
+    .hero-text .info-text {
+        font-size: 1.1rem; /* Tamaño de fuente para pantallas más pequeñas */
+        margin-top: 30px; /* Ajustar margen superior para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-text {
+        padding: 0 15px; /* Reducir el padding en pantallas más pequeñas */
+    }
+    .hero-text h1 {
+        font-size: 2.5rem; /* Tamaño de fuente para pantallas medianas */
+    }
+    .hero-text h2 {
+        font-size: 1.75rem; /* Tamaño de fuente para pantallas medianas */
+    }
+    .hero-text button {
+        padding: 12px 20px;
+        font-size: 1.1rem; /* Tamaño de fuente del botón para pantallas medianas */
+    }
+    .hero-text .info-text {
+        font-size: 1rem; /* Tamaño de fuente para pantallas medianas */
+        margin-top: 25px; /* Ajustar margen superior para pantallas medianas */
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 2rem; /* Tamaño de fuente para pantallas pequeñas */
+    }
+    .hero-text h2 {
+        font-size: 1.25rem; /* Tamaño de fuente para pantallas pequeñas */
+    }
+    .hero-text button {
+        padding: 10px 15px;
+        font-size: 1rem; /* Tamaño de fuente del botón para pantallas pequeñas */
+    }
+    .hero-text .info-text {
+        font-size: 0.9rem; /* Tamaño de fuente para pantallas pequeñas */
+        margin-top: 20px; /* Ajustar margen superior para pantallas pequeñas */
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-text h1 {
+        font-size: 1.75rem; /* Tamaño de fuente para pantallas extra pequeñas */
+    }
+    .hero-text h2 {
+        font-size: 1rem; /* Tamaño de fuente para pantallas extra pequeñas */
+    }
+    .hero-text button {
+        padding: 8px 12px;
+        font-size: 0.9rem; /* Tamaño de fuente del botón para pantallas extra pequeñas */
+    }
+    .hero-text .info-text {
+        font-size: 0.8rem; /* Tamaño de fuente para pantallas extra pequeñas */
+        margin-top: 15px; /* Ajustar margen superior para pantallas extra pequeñas */
+    }
+}
+
+
+/* catalogo-seccion.css */
+.catalogo-seccion {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    padding: 60px 0;
+    background-color: #f4f4f4;
+}
+
+.catalogo-seccion .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.catalogo-seccion h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #2a9d8f;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.catalogo-seccion h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 5px;
+    background-color: #2a9d8f;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.producto {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    overflow: hidden;
+    text-align: center;
+    max-width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.producto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.producto h3 {
+    font-size: 1.2em;
+    color: #333;
+    margin: 15px 0 10px;
+}
+
+.producto p {
+    color: #666;
+    margin: 0 0 10px;
+}
+
+.precio {
+    font-size: 1.3em;
+    color: #2a9d8f;
+    margin-bottom: 15px;
+}
+
+.btn-mas {
+    display: inline-block;
+    background-color: #2a9d8f;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+}
+
+.btn-mas:hover {
+    background-color: #264653;
+    transform: scale(1.05);
+}
+
+.btn-ver-todo {
+    display: inline-block;
+    background-color: #264653;
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.btn-ver-todo:hover {
+    background-color: #2a9d8f;
+    transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-us {
+    padding: 60px 20px;
+    text-align: center;
+    animation: fadeIn 1s ease;
+    background-color: #ffffff;
+}
+
+.about-us h2 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    left: 45%;
+    width: auto;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    display: flex;
+    margin: 0 auto;
+}
+
+.about-image {
+    position: relative;
+    width: 60%;
+}
+
+.about-image img {
+    width: 40%;
+    height: auto;
+}
+
+.about-text {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    background-color: #484848;
+    color: white;
+    padding: 40px 30px;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transform: translateX(50%);
+    animation: slideIn 1s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(50%);
+        opacity: 1;
+    }
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.about-text button {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #1c5cab;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.about-text button:hover {
+    background-color: #1c45ab;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .about-image img {
+        display: none;
+        width: 100%;
+    }
+
+    .about-text {
+        background-image: url('shower.jpg');
+        position: static;
+        width: 90%;
+        transform: translateX(0);
+        animation: none;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us {
+        padding: 30px 10px;
+    }
+
+    .about-us h2 {
+        position: relative;
+        left: 0;
+        font-size: 2rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .about-text button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+
+#contacto {
+    background: url('sobre.jpg') no-repeat center center/cover;
+    padding: 60px 0;
+    text-align: center;
+    color: #fff;
+}
+
+#contacto .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(0, 0, 62, 0.5); /* Fondo semi-transparente para mejor legibilidad */
+    padding: 40px;
+    border-radius: 10px;
+}
+
+#contacto h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 10px;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+#contacto h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 5px;
+    background-color: #2a9d8f;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contact-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.info-item {
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    flex: 1 1 250px;
+    max-width: 300px;
+    color: #333;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.info-item h3 {
+    font-size: 1.5em;
+    color: #2a9d8f;
+    margin-bottom: 15px;
+}
+
+.info-item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-item ul li, .info-item p {
+    font-size: 1em;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.info-item a {
+    color: #2a9d8f;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-item a:hover {
+    color: #264653;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #f4a261;
+    transform: scale(1.2);
+}
+
+.opening-days {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+
+#catalogo {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+}
+
+#catalogo .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#catalogo h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+#catalogo .filtros {
+    margin-bottom: 30px;
+}
+
+#catalogo .filtro-btn {
+    background: #f4a261;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#catalogo .filtro-btn:hover {
+    background: #e76f51;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#catalogo .catalogo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+#catalogo .producto {
+    background: #fff;
+    padding: 0;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#catalogo .producto-contenido {
+    position: relative;
+    overflow: hidden;
+}
+
+#catalogo .producto img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+#catalogo .producto-contenido:hover img {
+    transform: scale(1.1);
+}
+
+#catalogo .producto-detalles {
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#catalogo .producto-detalles h2 {
+    font-size: 1.6em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#catalogo .producto-detalles p {
+    color: #555;
+    margin: 10px 0;
+}
+
+#catalogo .producto-detalles .precio {
+    font-size: 1.3em;
+    color: #f4a261;
+    margin-bottom: 15px;
+}
+
+#catalogo .producto-detalles .btn {
+    display: inline-block;
+    background: #2a9d8f;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#catalogo .producto-detalles .btn:hover {
+    background: #264653;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#catalogo .producto:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+
+#catalogo .producto:hover .producto-detalles {
+    background-color: #fff;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    #catalogo .filtros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #catalogo .filtro-btn {
+        margin: 5px 0;
+    }
+}
+
+#pagos {
+    background-color: #f1f5f9;
+    padding: 80px 0;
+    text-align: center;
+}
+
+#pagos .container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#pagos h2 {
+    font-size: 2.8em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+    animation: fadeInUp 0.6s ease-out;
+}
+
+#pagos h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 5px;
+    background-color: #2a9d8f;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#pagos p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 50px;
+    animation: fadeInUp 0.8s ease-out 0.2s;
+}
+
+#pagos ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#pagos li {
+    font-size: 1.2em;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    transition: color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    padding: 15px 25px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    animation: fadeInUp 0.8s ease-out 0.4s;
+}
+
+#pagos li:hover {
+    color: #f4a261;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+#pagos .icon {
+    font-size: 1.8em;
+    color: #2a9d8f;
+    transition: color 0.4s ease, transform 0.4s ease;
+}
+
+#pagos .icon:hover {
+    color: #264653;
+    transform: rotate(20deg) scale(1.1);
+}
+
+@media (max-width: 768px) {
+    #pagos ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #pagos li {
+        font-size: 1em;
+        padding: 12px 20px;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 20px;
+    text-align: left;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h2 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer-section p, .footer-section a {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #1c5cab;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 20px 0;  /* Reducido a 10px */
+    border-top: 1px solid #444;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+.footer-section i {
+    margin-right: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin: 20px 0;
+        text-align: center;
+    }
+}
+
