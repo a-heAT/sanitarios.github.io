@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
     <link rel="icon" href="icon.png" type="image/png">
 </head>
 <body>
@@ -21,9 +22,10 @@
         </div>
         <ul class="navbar">
             <li><a href="#">Inicio</a></li>
-            <li><a href="#about">Sobre Nosotros</a></li>
             <li><a href="#catalogo-seccion">Catalogo</a></li>
-            <li><a href="#contacto">Contactanos</a></li>
+            <li><a href="#ubicacion">Ubicacion</a></li>
+            <li><a href="#about">Sobre Nosotros</a></li>
+            <li><a href="#contacto">Contacto</a></li>
         </ul>
         <div class="cta">
             <i class="fas fa-phone-alt icon"></i>
@@ -37,88 +39,102 @@
     <nav class="mobile-menu">
         <ul>
             <li><a href="#">Inicio</a></li>
-            <li><a href="#about">Sobre Nosotros</a></li>
             <li><a href="#catalogo-seccion">Catalogo</a></li>
+            <li><a href="#ubicacion">Ubicacion</a></li>
+            <li><a href="#about">Sobre Nosotros</a></li>
             <li><a href="#contacto">Contactanos</a></li>
         </ul>
     </nav>
 
     <section class="hero">
         <div class="hero-text">
-            <h1>Expertos en ventas de Gafiteria</h1>
+            <h1>Expertos en ventas de Griferia</h1>
             <h2>Santiago Centro</h2>
             <button onclick="window.location.href='#catalogo-seccion'">Catálogo</button>
             <p class="info-text">Precios económicos • Bajo 10 años de experiencia • Excelente atención • Santiago • Llama al número • Garantía • Cualquier medio de pago • Stock en todos los productos</p>
         </div>
     </section>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            let currentIndex = 0;
-            const images = document.querySelectorAll('.hero-images img');
-            const totalImages = images.length;
-    
-            function changeImage() {
-                images[currentIndex].classList.remove('active');
-                currentIndex = (currentIndex + 1) % totalImages;
-                images[currentIndex].classList.add('active');
-            }
-    
-            setInterval(changeImage, 5000); // Cambia la imagen cada 5 segundos
-        });
-    </script>
-
     <section id="catalogo-seccion" class="catalogo-seccion">
             <div class="container">
                 <h2>Catálogo de Productos</h2>
                 <div class="productos">
                     <div class="producto categoria1">
-                        <img src="https://via.placeholder.com/300x200" alt="Producto 1">
+                        <img src="img/1.jpeg" alt="Producto 1">
                         <h3>Producto 1</h3>
                         <p>Descripción breve del producto 1.</p>
-                        <p class="precio">$20.00</p>
-                        <a href="catalogo.html" class="btn-mas">Más</a> <!-- Botón para ir a la página de catálogo completa -->
+                        <a href="catalogo.html" class="btn-mas">Más</a>
                     </div>
                     <div class="producto categoria2">
-                        <img src="https://via.placeholder.com/300x200" alt="Producto 2">
+                        <img src="img/2.jpeg" alt="Producto 2">
                         <h3>Producto 2</h3>
                         <p>Descripción breve del producto 2.</p>
-                        <p class="precio">$30.00</p>
-                        <a href="catalogo.html" class="btn-mas">Más</a> <!-- Botón para ir a la página de catálogo completa -->
+                        <a href="catalogo.html" class="btn-mas">Más</a>
                     </div>
                     <div class="producto categoria3">
-                        <img src="https://via.placeholder.com/300x200" alt="Producto 3">
+                        <img src="img/3.jpeg" alt="Producto 3">
                         <h3>Producto 3</h3>
                         <p>Descripción breve del producto 3.</p>
-                        <p class="precio">$25.00</p>
-                        <a href="catalogo.html" class="btn-mas">Más</a> <!-- Botón para ir a la página de catálogo completa -->
+                        <a href="catalogo.html" class="btn-mas">Más</a>
                     </div>
                     <div class="producto categoria1">
-                        <img src="https://via.placeholder.com/300x200" alt="Producto 4">
+                        <img src="img/4.jpeg" alt="Producto 4">
                         <h3>Producto 4</h3>
                         <p>Descripción breve del producto 4.</p>
-                        <p class="precio">$22.00</p>
-                        <a href="catalogo.html" class="btn-mas">Más</a> <!-- Botón para ir a la página de catálogo completa -->
+                        <a href="catalogo.html" class="btn-mas">Más</a>
                     </div>
                     <div class="producto categoria2">
-                        <img src="https://via.placeholder.com/300x200" alt="Producto 5">
+                        <img src="img/5.jpeg" alt="Producto 5">
                         <h3>Producto 5</h3>
                         <p>Descripción breve del producto 5.</p>
-                        <p class="precio">$28.00</p>
-                        <a href="catalogo.html" class="btn-mas">Más</a> <!-- Botón para ir a la página de catálogo completa -->
+                        <a href="catalogo.html" class="btn-mas">Más</a>
                     </div>
                     <div class="producto categoria3">
-                        <img src="https://via.placeholder.com/300x200" alt="Producto 6">
+                        <img src="img/6.jpeg" alt="Producto 6">
                         <h3>Producto 6</h3>
                         <p>Descripción breve del producto 6.</p>
-                        <p class="precio">$26.00</p>
-                        <a href="catalogo.html" class="btn-mas">Más</a> <!-- Botón para ir a la página de catálogo completa -->
+                        <a href="catalogo.html" class="btn-mas">Más</a>
                     </div>
                 </div>
-                <a href="catalogo.html" class="btn-ver-todo">Ver Todo el Catálogo</a> <!-- Botón para ir a la página de catálogo completa -->
+                <a href="catalogo.html" class="btn-ver-todo">Ver Todo el Catálogo</a>
             </div>
         </section>
-        <script src="catalogo-seccion.js"></script> <!-- Enlaza el archivo JS específico para esta sección -->
+        <script src="catalogo-seccion.js"></script> 
+
+        <section id="ubicacion" class="ubicacion">
+            <h2>Nuestra Ubicación</h2>
+            <div class="mapa-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d996.4737039283128!2d-70.6470581!3d-33.4592946!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c50b8b8e2e49%3A0xc00812b5a7b6f123!2sFranklin%20594%2C%20Santiago%2C%20Chile!5e0!3m2!1ses!2sus!4v1657909736764!5m2!1ses!2sus"
+                    width="50%"
+                    height="350"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <h3>Medios de Pago Aceptados</h3>
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <i class="fas fa-credit-card"></i>
+                    <p>Tarjetas de Crédito</p>
+                </div>
+                <div class="payment-method">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <p>Efectivo</p>
+                </div>
+                <div class="payment-method">
+                    <i class="fas fa-mobile-alt"></i>
+                    <p>Transferencia Bancaria</p>
+                </div>
+                <div class="payment-method">
+                    <i class="fas fa-wallet"></i>
+                    <p>Billeteras Electrónicas</p>
+                </div>
+            </div>
+        </section>
+
     <section class="about-us" id="about">
         <h2>Sobre Nosotros</h2>
         <div class="about-content">
@@ -126,53 +142,13 @@
                 <img src="shower.jpg" alt="Shower">
                 <div class="about-text">
                     <p>Somos una empresa con más de 10 años de experiencia en ventas de productos de gafitería. A pesar del gran golpe en la pandemia, nuestros precios se mantienen intactos, siempre comprometidos con nuestros clientes.</p>
-                    <button>Catalogo</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contacto" class="contact">
-        <div class="container">
-            <h2>Contáctanos</h2>
-            <div class="contact-info">
-                <div class="info-item">
-                    <h3>Redes Sociales</h3>
-                    <ul class="social-links">
-                        <li><a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                </div>
-                <div class="info-item">
-                    <h3>Contacto</h3>
-                    <ul class="contact-details">
-                        <li><i class="fas fa-phone-alt"></i> +123 456 7890</li>
-                        <li><i class="fas fa-mobile-alt"></i> +098 765 4321</li>
-                    </ul>
-                </div>
-                <div class="info-item">
-                    <h3>Email</h3>
-                    <p><i class="fas fa-envelope"></i> <a href="mailto:info@tuservicio.com">info@tuservicio.com</a></p>
-                </div>
-                <div class="info-item">
-                    <h3>Ubicación</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> 123 Calle Principal, Ciudad, País</p>
-                </div>
-                <div class="info-item">
-                    <h3>Días de Apertura</h3>
-                    <ul class="opening-days">
-                        <li>Lunes - Viernes: 9:00 AM - 6:00 PM</li>
-                        <li>Sábado: 10:00 AM - 4:00 PM</li>
-                        <li>Domingo: Cerrado</li>
-                    </ul>
+                    <a href="catalogo.html" class="btn-catalogo">Catalogo</a>
                 </div>
             </div>
         </div>
     </section>
         
-    <footer class="footer">
+    <footer class="footer" id="contacto">
         <div class="footer-content">
             <div class="footer-section contact">
                 <h2>Contacto</h2>
