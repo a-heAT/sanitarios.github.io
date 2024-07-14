@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grace Plumbing</title>
+    <title>Sanitarios Franklin</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="icon.png" type="image/png">
 </head>
 <body>
     <header class="header">
@@ -43,29 +44,31 @@
     </nav>
 
     <section class="hero">
-        <img src="bathroom.jpg" alt="Bathroom">
         <div class="hero-text">
-            <h1>Expertos en ventas de Griferia</h1>
+            <h1>Expertos en ventas de Gafiteria</h1>
             <h2>Santiago Centro</h2>
-            <button onclick="window.location.href='#catalogo-seccion'">Catálogo</button> <!-- Botón modificado -->
+            <button onclick="window.location.href='#catalogo-seccion'">Catálogo</button>
             <p class="info-text">Precios económicos • Bajo 10 años de experiencia • Excelente atención • Santiago • Llama al número • Garantía • Cualquier medio de pago • Stock en todos los productos</p>
         </div>
     </section>
 
-    <!DOCTYPE html>
-    <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Catálogo de Productos</title>
-        <link rel="stylesheet" href="catalogo-seccion.css"> <!-- Enlaza el archivo CSS específico para esta sección -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <section id="catalogo-seccion" class="catalogo-seccion">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let currentIndex = 0;
+            const images = document.querySelectorAll('.hero-images img');
+            const totalImages = images.length;
+    
+            function changeImage() {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % totalImages;
+                images[currentIndex].classList.add('active');
+            }
+    
+            setInterval(changeImage, 5000); // Cambia la imagen cada 5 segundos
+        });
+    </script>
+
+    <section id="catalogo-seccion" class="catalogo-seccion">
             <div class="container">
                 <h2>Catálogo de Productos</h2>
                 <div class="productos">
@@ -197,5 +200,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="hero.js"></script>
 </body>
 </html>
