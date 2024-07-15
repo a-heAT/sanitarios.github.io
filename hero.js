@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const images = [
-        'bathroom.jpg', 
-        'bathroom.webp',
-        'bathroom3.webp'
+        'hero1.jpg', 
+        'hero2.jpg',
+        'hero3.jpg'
     ];
     const hero = document.querySelector('.hero');
     let currentIndex = 0;
@@ -21,5 +21,5 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     changeImage();
-    setInterval(changeImage, 5000); // Cambia la imagen cada 5 segundos
+    setInterval(changeImage, 8000); // Cambia la imagen cada 5 segundos
 });

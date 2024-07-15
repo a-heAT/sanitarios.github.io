@@ -11,6 +11,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #244148;
 }
 
 .header {
@@ -67,7 +68,7 @@ body {
 }
 
 .navbar a:hover {
-    color: #1c5cab; /* Cambiar el color del texto al pasar el cursor */
+    color: #244148; /* Cambiar el color del texto al pasar el cursor */
 }
 
 .navbar a::after {
@@ -75,7 +76,7 @@ body {
     display: block;
     width: 0;
     height: 2px;
-    background: #1c5cab; /* Color de la línea */
+    background: #244148; /* Color de la línea */
     transition: width 0.3s;
     margin: 0 auto;
     position: absolute;
@@ -95,7 +96,7 @@ body {
     background: none;
     border: none;
     font-size: 24px;
-    color: #070518;
+    color: #244148;
     cursor: pointer;
     margin-right: 5px;
     z-index: 1001; /* Asegúrate de que esté por encima de otros elementos */
@@ -146,7 +147,7 @@ body {
 }
 
 .cta {
-    color: #000000;
+    color: #244148;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -255,23 +256,25 @@ body {
     margin-top: 10px;
 }
 
-.hero-text button {
+.hero-text .btn-hero {
+    display: inline-block;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 500;
+    font-weight: 400;
+    font-size: 1.2rem;
     font-style: normal;
-    background-color: #1c5cab;
-    color: white;
-    border: none;
-    padding: 20px 30px; /* Aumentado para más visibilidad */
-    font-size: 1.5rem; /* Aumentado para más visibilidad */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-top: 10px;
+    background-color: #244148;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 10px;
 }
 
-.hero-text button:hover {
-    background-color: #1c45ab;
+.hero-text .btn-hero:hover {
+    background-color: #268198;
+    transform: scale(1.05);
 }
 
 .hero-text .info-text {
@@ -289,7 +292,7 @@ body {
     .hero-text h2 {
         font-size: 2rem; /* Tamaño de fuente para pantallas más pequeñas */
     }
-    .hero-text button {
+    .hero-text .btn-hero {
         padding: 15px 25px;
         font-size: 1.3rem; /* Tamaño de fuente del botón para pantallas más pequeñas */
     }
@@ -309,7 +312,7 @@ body {
     .hero-text h2 {
         font-size: 1.75rem; /* Tamaño de fuente para pantallas medianas */
     }
-    .hero-text button {
+    .hero-text .btn-hero {
         padding: 12px 20px;
         font-size: 1.1rem; /* Tamaño de fuente del botón para pantallas medianas */
     }
@@ -326,7 +329,7 @@ body {
     .hero-text h2 {
         font-size: 1.25rem; /* Tamaño de fuente para pantallas pequeñas */
     }
-    .hero-text button {
+    .hero-text .btn-hero {
         padding: 10px 15px;
         font-size: 1rem; /* Tamaño de fuente del botón para pantallas pequeñas */
     }
@@ -339,17 +342,20 @@ body {
 @media (max-width: 576px) {
     .hero-text h1 {
         font-size: 1.75rem; /* Tamaño de fuente para pantallas extra pequeñas */
+        width: 576px;
     }
     .hero-text h2 {
-        font-size: 1rem; /* Tamaño de fuente para pantallas extra pequeñas */
+        font-size: 1.5rem; /* Tamaño de fuente para pantallas extra pequeñas */
     }
-    .hero-text button {
+    .hero-text .btn-hero {
         padding: 8px 12px;
         font-size: 0.9rem; /* Tamaño de fuente del botón para pantallas extra pequeñas */
     }
     .hero-text .info-text {
         font-size: 0.8rem; /* Tamaño de fuente para pantallas extra pequeñas */
         margin-top: 15px; /* Ajustar margen superior para pantallas extra pequeñas */
+        width: 400px;
+        margin-left: 15%;
     }
 }
 
@@ -371,7 +377,7 @@ body {
     font-size: 2.5em;
     margin-bottom: 40px;
     text-align: center;
-    color: #2a4f9d;
+    color: #244148;
     font-weight: 500;
     position: relative;
     padding-bottom: 10px;
@@ -383,7 +389,7 @@ body {
     display: block;
     width: 80px;
     height: 2px;
-    background-color: #2a4f9d;
+    background-color: #244148;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -427,7 +433,7 @@ body {
 
 .btn-mas {
     display: inline-block;
-    background-color: #2a4f9d;
+    background-color: #244148;
     color: #fff;
     padding: 10px 15px;
     border-radius: 5px;
@@ -438,13 +444,13 @@ body {
 }
 
 .btn-mas:hover {
-    background-color: #183471;
+    background-color: #268198;
     transform: scale(1.05);
 }
 
 .btn-ver-todo {
     display: inline-block;
-    background-color: #2a4f9d;
+    background-color: #244148;
     color: #fff;
     padding: 10px 15px;
     border-radius: 5px;
@@ -456,7 +462,7 @@ body {
 }
 
 .btn-ver-todo:hover {
-    background-color: #597ac2;
+    background-color: #268198;
     transform: scale(1.05);
 }
 
@@ -472,10 +478,6 @@ body {
 }
 
 .ubicacion {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 300;
-    font-style: normal;
     text-align: center;
     padding: 60px 20px;
     background-image: url('bathroom1.jpg'); /* Cambia la URL a la de tu imagen */
@@ -487,9 +489,24 @@ body {
 }
 
 .ubicacion h2 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #333;
+    color: #244148;
+}
+
+.ubicacion h2::after{
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    background-color: #244148;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #map {
@@ -554,7 +571,7 @@ body {
     width: auto;
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #2a4f9d;
+    color: #244148;
 }
 
 .about-us h2::after {
@@ -562,7 +579,7 @@ body {
     display: block;
     width: 80px;
     height: 2px;
-    background-color: #2a4f9d;
+    background-color: #244148;
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -625,7 +642,7 @@ body {
 .btn-catalogo {
     background-color: #244148;
     color: white;
-border-radius: 5px;
+    border-radius: 5px;
     padding: 10px 15px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.3s ease;
